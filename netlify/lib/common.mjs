@@ -17,5 +17,5 @@ export async function isAdmin(name) {
   const owner = await store("atd-meta").get("owner", { type: "json" });
   return !!owner && String(owner.name).toLowerCase() === name.toLowerCase();
 }
-export const THEME_KEYS = ["dawn","moss","deep","steel","dessert","pirate","toy","sakura","winter","haunt","star","dragon","celestial","abyss"];
+export const THEME_KEYS = ["dawn","moss","deep","steel","dessert","pirate","toy","sakura","winter","haunt","star","dragon","celestial","abyss","glory"];
 export const SKIN_IDS = new Set([].concat(...[0,1,2,3,4,5,6,7].map((u) => THEME_KEYS.map((k) => u + ":" + k))));
